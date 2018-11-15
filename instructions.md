@@ -3,7 +3,7 @@ layout: lesson
 title: WordPress Instructional
 ---
 
-# Uploading your static html site to wordpress and make it html friendly.
+# Upload your static html site to Wordpress and make it user friendly.
 
 ## Introduction
 
@@ -17,4 +17,25 @@ By first creating a static site through html and css we can get our site to look
 
 ## Making it user friendly
 
-Once your site is in place, we can now do several things to help make it more user friendly.
+Once your site is in place, we can now do several things to help make it more user friendly. [This article](https://premium.wpmudev.org/blog/simplify-wordpress-backend/) shows several ways you can do this, but we'll highlight some of them below.
+
+### Make the client an editor
+One way to do this is instead of allowing your clients to be administrators to the site in Wordpress, you can make them editors. This will remove a lot of settings and tools for them so they can manage the site better and don't accidentally change something that should not be changed. One downside to this is depending on how extensive they want to be able to make edits, it may take away some of the things they want to be able to use.
+
+### Disable theme and plugin editing
+This is another way to simplify what the client sees. Just put this code in your wp-config.php file:
+
+define( 'DISALLOW_FILE_EDIT', true );
+
+Doing this removes file editing options in the plugins and appearance section. The client doesn't need to have access to these files, and this will help simplify things for them.
+
+### Use plugins
+There are a variety of plugins you can use that help simplify things. For example, there is a plugin you can put in place to simplify menus and submenus so the client does not have to see things you do not want them to.
+
+## Additional Tips
+[This](https://torquemag.io/2017/05/make-wordpress-safe-for-clients/) is another good article that gives tips on how to make the site more friendly for clients.
+
+One thing they recommend is to install the plugin called "Stream". This can be helpful once you are finished with the site and leave it in the hands of your clients. If your client ever contacts you saying something went wrong with the site, this plugin makes it much easier to see what went wrong. It tracks exactly what a user clicked and when they did it. This will make it much easier for you to fix any problems they may have.
+
+## Conclusion
+Wordpress is a great tool to have to help clients manage their own sites once we're done with it. Wordpress can be difficult to make a site look just how we want and then we have to hand over that mess to our clients. Knowing ways to simplify Wordpress and make it more user friendly for our clients is one way we can help our clients confusion, and our peace of mind as designers.
